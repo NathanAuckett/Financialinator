@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financialinator</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1>Financialinator!</h1>
+        </div>
+    </div>
+
+    <div id="filters" class="d-flex justify-content-center flex-wrap">
+        <div id="sourceContainer">
+            <label for="source">Source File</label>
+            <select id="source" onchange="sourceChange()">
+            </select>
+        </div>
+        <div>
+            <label for="account">Account Number</label>
+            <select id="account" onchange="accountChange()">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div>
+            <label for="month">Month</label>
+            <select id="month" onchange="monthChange()">
+                <option value="">All</option>
+                <option value="0">Jan</option>
+                <option value="1">Feb</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">Aug</option>
+                <option value="8">Sept</option>
+                <option value="9">Oct</option>
+                <option value="10">Nov</option>
+                <option value="11">Dec</option>
+            </select>
+        </div>
+
+        <div id="weekContainer" style="display: none;">
+            <label for="week">Week</label>
+            <select id="week" onchange="getAllData()">
+                <option value="">All</option>
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="4">5</option>
+            </select>
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <select id="category" onchange="getAllData()">
+                <option value="">All</option>
+            </select>
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <canvas id="chart" style="display:none"></canvas>
+    </div>
+
+    <div id="totalContainer" class="row text-end" style="display: none">
+        <h4 style="clear:none; display: inline">Filtered Category Total: </h4>    
+        <h5 id="total" style="clear:none; display: inline"></h5> <!-- jo: try and move these kinds of inline styles into the CSS file using classes -->
+    </div>
+    
+    <div class="row" style="margin: 1rem"> <!-- jo: try and move these kinds of inline styles into the CSS file using classes -->
+        <table id="data" class="table table-striped table-dark">
+            <!--Data display here-->
+        </table>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+    <script type="module" src="http://localhost:3000/bankFormats.js"></script>
+    <script type="module" src="http://localhost:3000/scripts.js"></script>
+
+</body>
+</html>

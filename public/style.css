@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+h1 {
+    margin: 2rem;
+    font-family: "Prompt";
+    font-size: 48px;
+}
+
+label {
+    margin: 1rem 0.3rem 1rem 1rem;
+}
+
+body{
+    background-color: rgb(36, 36, 36);
+    color: white;
+}
