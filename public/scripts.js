@@ -24,8 +24,6 @@ async function getSourceFiles(){
     const data = await fetch(baseURL+"/files");
     sourceFiles = await data.json();
 
-    console.log(source);
-
     let selector = document.getElementById("source");
     for (let file of sourceFiles){
         let op = document.createElement(`option`);

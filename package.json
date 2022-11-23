@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "Nathan Auckett",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "@vanillaes/csv": "^3.0.1",

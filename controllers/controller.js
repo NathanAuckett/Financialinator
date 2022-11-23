@@ -14,7 +14,7 @@ console.log(`Found source files: ` + sourceFiles);
 //Add objects to jsonData for each file
 let jsonData = {};
 for (let s = 0; s < sourceFiles.length; s ++){
-	if (sourceFiles[s].toLowerCase().includes(".csv")){ //only load correct file type
+	if (sourceFiles[s].includes(".csv")){
 		jsonData[sourceFiles[s]] = loadAndPrepSouceFile(s);
 	}
 }
