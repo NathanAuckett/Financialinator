@@ -2,6 +2,8 @@
 
 This application helps to categorize bank statements, exported as CSV files from most bank websites.
 
+![Screenshot](./financialinator.png)
+
 I'm planning to add UI functionality to change and edit bank formats and categories.<br>
 This will likely be converted into a React app to allow for easier hosting and use.
 
